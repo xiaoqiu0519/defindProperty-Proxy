@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div class="userlist">
+      <p>
+        <span>姓名：</span> 
+        <input type="text" v-model="name" placeholder="姓名"/>
+      </p>
+      <p>
+        <span>年龄：</span>
+        <input type="text" v-model="age" placeholder="年龄"/>
+      </p>
+      <p>
+        <span>邮箱：</span>
+        <input type="text" v-model="email" placeholder="邮箱"/>
+      </p>
+      
+      <div>
+        <p><span>电话：</span> <input type="text" v-model="tel" placeholder="电话"></p>
+      </div>
+    </div>
+    <div class="usermes">
+      <p>姓名：<span>{{ name }}</span> </p>
+      <p>年龄：<span>{{ age }}</span> </p>
+      <p>邮箱：<span>{{ email }}</span> </p>
+      <p>电话：<span>{{ tel }}</span> </p>
+    </div>
+    <!-- <p>{{ name }}</p> -->
+  </div>
+  <script src="./mvvm.js"></script>
+  <script>
+    new MVVM('#app',{
+      name:'',
+      age:'',
+      email:'',
+      tel:''
+    })
+  </script>
+</body>
+</html>
